@@ -1,0 +1,1 @@
+json.array! [{hamada: "the best hamada"}

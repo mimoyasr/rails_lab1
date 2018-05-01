@@ -2,8 +2,19 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def male 
-    @var1 = "i am here "
-    puts "hello from mals"
+    # @var1 = "i am here "
+    # puts "hello from mals"
+    # render :male
+    # respond_to do |format|
+    #   # format.html { render :male  }
+    #   format.json { render :male  }
+    # end
+    @users = User.where(gender: User.genders['male'])
+    user = @users.first
+    redirect_to user 
+    # render plain: "hello"
+    # render :index
+
   end
 
   # GET /users
