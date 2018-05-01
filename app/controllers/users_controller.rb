@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  def male 
+    @var1 = "i am here "
+    puts "hello from mals"
+  end
+
   # GET /users
   # GET /users.json
   def index
