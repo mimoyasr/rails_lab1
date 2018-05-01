@@ -4,5 +4,9 @@ class User < ApplicationRecord
 
     enum gender: {male: 0, female: 1, any: 2}
 
-    
+    before_save :update_full_name
+
+    def update_full_name
+        self.full_name = "#{self.name} #{self.last_name}"
+    end
 end
