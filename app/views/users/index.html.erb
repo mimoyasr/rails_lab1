@@ -15,7 +15,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name.titleize %></td>
+        <td><%= user.full_name %></td>
         <td><%= user.email %></td>
         <td><%= user.gender.titleize %></td>
         <td><%= link_to 'Show', user %></td>
